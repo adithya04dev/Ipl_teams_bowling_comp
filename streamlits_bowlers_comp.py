@@ -66,15 +66,15 @@ def main():
         
         # Create the scatter plot
         plt.figure(figsize=(10, 6))
-        scatter_plot = sns.scatterplot(y='runrate', x='average', data=result1)
+        scatter_plot = sns.scatterplot(y='average', x='runrate', data=result1)
         
         # Annotate the points with player names
         for i, row in result1.iterrows():
-            scatter_plot.text(row['average'],row['runrate'], row['BowlingTeam'], fontsize=8, alpha=0.7)
+            scatter_plot.text(row['runrate'],row['average'], row['BowlingTeam'], fontsize=8, alpha=0.7)
         
-        plt.title('Scatter Plot of Average vs Economy')
-        plt.xlabel('Average')
-        plt.ylabel('Economy')
+        plt.title('Scatter Plot of Economy vs Average')
+        plt.xlabel('Economy')
+        plt.ylabel('Average')
        
         
         st.pyplot(plt)
@@ -82,7 +82,7 @@ def main():
         
         
         
-        st.write("All Bowlers stats")
+        st.write("All Teams Bowling stats")
         st.dataframe(result1)
         
         
