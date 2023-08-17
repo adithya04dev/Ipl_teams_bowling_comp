@@ -2,9 +2,9 @@
 import pandas as pd
 import numpy as np
 import pickle
-import sys 
-sys.path.append('C:/Users/adith/Documents/ipl_app/team_app/bowling_comp')
-df=pd.read_csv("C:/Users/adith/Documents/ipl_app/team_app/bowling_comp/processed_ballbyball.csv")
+#import sys 
+#sys.path.append('C:/Users/adith/Documents/ipl_app/team_app/bowling_comp')
+df=pd.read_csv("processed_ballbyball.csv")
 
 class Bowler_comp():
 
@@ -58,5 +58,5 @@ bowcomp=Bowler_comp(df)
 
 
 
-with open('C:/Users/adith/Documents/ipl_app/team_app/bowling_comp/bowling_comp.pkl', 'wb') as f:
+with open('bowling_comp.pkl', 'wb') as f:
     pickle.dump(bowcomp, f)
