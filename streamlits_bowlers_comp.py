@@ -8,8 +8,8 @@ Created on Tue Aug 15 17:43:14 2023
 
 import streamlit as st
 import numpy as np
-import sys 
-sys.path.append('C:/Users/adith/Documents/ipl_app/team_app/bowling_comp')
+#import sys 
+#sys.path.append('C:/Users/adith/Documents/ipl_app/team_app/bowling_comp')
 
 import pandas as pd
 import pickle
@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 
 
 
-with open('C:/Users/adith/Documents/ipl_app/team_app/bowling_comp/bowling_comp.pkl', 'rb') as f:
+with open('bowling_comp.pkl', 'rb') as f:
     bowcomp = pickle.load(f)
     #result1=bat.calculate("RA Tripathi",[1,2,3],["Pace"],[2022])
     #print(result1['strike_rate'])
